@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import TexasForecast from './TexasForecast';
+import Forecast from './Forecast';
 
 function App() {
   const cities = ["Reno NV", "Austin TX", "Tampa, Fl"]
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     {cities.map((city) => {
-      return <TexasForecast city={city}/>
+      return <Forecast city={city}/>
     }
     
     )}
