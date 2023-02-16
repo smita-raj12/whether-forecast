@@ -1,20 +1,19 @@
 import React from 'react'
 import './App.css';
-import Forecast from './Forecast';
+
+import NavBar from './components/NavBar';
 
 function App() {
-  const cities = ["Reno NV", "Austin TX", "Tampa, Fl"]
+ 
   
   return (
     <>
-    {cities.map((city) => {
-      return <Forecast city={city}/>
-    }
-    
-    )}
-   
+      <NavBar/>
     </>
-  )
+  );
+   
+
+ 
 }
 
 export default App;
