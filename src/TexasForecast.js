@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react';
 
-export default function TexasForecast() {
+export default function TexasForecast({city}) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
   
             useEffect(() => {
-            fetch('http://api.weatherapi.com/v1/current.json?key=e44d5f80bc8e47009f5225012231502&q=Austin Tx')
+            fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${city}`)
             .then(res => res.json())
             .then(
               (jsonifiedResponse) => {
