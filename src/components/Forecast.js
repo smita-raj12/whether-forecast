@@ -27,6 +27,7 @@ export default function Forecast({city}) {
         display:'inline-block',
       }
 
+
     useEffect(() => {
 
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=14`)
@@ -52,7 +53,6 @@ export default function Forecast({city}) {
                 <div style={mainBox} className='container'>
                   <div style={topBox} className='bg-info'>
                     <div>
-                    {moment().calendar()}
                         <h1>{city} </h1><br />
                         <h3>{items.current.condition.text}</h3>
                     </div>
@@ -62,8 +62,8 @@ export default function Forecast({city}) {
                     </div>
                   </div>    
                   <div style={tableWrapper}>
-                        <table  className="table table-bordered">
-                           <thead className="thead-dark">
+                        <table  className="table table-bordered" style={{border: '1px solid black'}}>
+                           <thead>
                                 <tr>
                                     <th scope="col">Days</th>
                                     <th scope="col">Max Tem</th>
