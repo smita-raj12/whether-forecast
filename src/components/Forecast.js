@@ -21,7 +21,12 @@ export default function Forecast({city}) {
         justifyContent: 'space-between',
     }
 
-   
+    const tableWrapper = {
+        height: '600px',
+        overflow: 'auto',
+        display:'inline-block',
+      }
+
     useEffect(() => {
 
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=14`)
@@ -56,7 +61,7 @@ export default function Forecast({city}) {
                         <h2>{items.current.temp_f} F</h2>
                     </div>
                   </div>    
-                  <div>
+                  <div style={tableWrapper}>
                         <table  className="table table-bordered">
                            <thead className="thead-dark">
                                 <tr>
