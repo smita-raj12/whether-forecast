@@ -1,70 +1,70 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Whether Forecast
 
-## Available Scripts
+### By Smita
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+ This is a complete web application for tracking 14 days weather forecast for 3 different US cities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
+1. Bootstrap 
+2. CSS
+3. HTML5
+4. JavaScript ES6
+5. Node.js 
+6. Node Package Manager 
+7. React 
+8. React Scripts 
+9. Moment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Setup/Installation Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### For front-End
 
-### `npm run build`
+1. Download or clone the [https://github.com/smita-raj12/whether-forecast](https://github.com/smita-raj12/whether-forecast) to your local machine.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Download any Code Editor for your choice. (Here I used VSCode).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Make sure Node has installed if not search it on google and follow the steps of node installation. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open git BASH terminal and navigate to the client , within the directory
+Run `npm install` in the git BASH terminal to install dependencies. 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. View the website by visiting localhost:3000/ in a new web browser tab (such as google chrome)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### For API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. create api key from [here](https://www.weatherapi.com/). On Forecst.js file replace `process.env.REACT_APP_API_KEY ` to your key. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Feature enhancements:- 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [] Add dropdown box to select city.
+- [] Inside navbar add options like selecting weather forecast for next 10 days and hourly.
+- [] Add search box inside a navbar to search cities. 
+- [] Add more parameters to table 
+- [] Add some stylings to home page. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Known bugs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Background image is not covring full page. 
 
-### Analyzing the Bundle Size
+## License information with a copyright and date:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+MIT License
 
-### Making a Progressive Web App
+Copyright (c) 2021 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Advanced Configuration
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact information:
+   
+* smita.raj12@gmail.com
