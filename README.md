@@ -49,7 +49,7 @@ Create api key from [here](https://www.weatherapi.com/). On Forecast.js file rep
 - Add more parameters to table 
 - Add some stylings to home page. 
 - Display current location whether forecast.  
-
+- Align all contents for diffeent screen sixes. 
 
 ## Known bugs
 
