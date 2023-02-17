@@ -5,7 +5,7 @@
 
 ## Project Description
 
-This is a complete web application for tracking 14 days weather forecast for 3 different US cities.
+This is a simple web application for tracking 14 days weather forecast for 3 different US cities.
 
 ## Technologies Used
 1. Bootstrap 
@@ -47,11 +47,12 @@ Create api key from [here](https://www.weatherapi.com/). On Forecast.js file rep
 - Add search box inside a navbar to search cities. 
 - Add more parameters to table 
 - Add some stylings to home page. 
+- Display current location whether forecast.  
 
 
 ## Known bugs
 
-* Background image is not covring full page. 
+* If any bugs should go here.
 
 ## License information with a copyright and date:
 

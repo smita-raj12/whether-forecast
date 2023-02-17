@@ -8,7 +8,7 @@ const mainPage ={
   backgroundImage: `url(${backgroungImage})`, 
   backgroungRepeat:'no-repeat', 
   backgroundSize: 'cover', 
-  height:'full'
+  height:'100%'
 }
 function App() {
  

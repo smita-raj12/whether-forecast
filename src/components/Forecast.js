@@ -14,9 +14,10 @@ export default function Forecast({city}) {
     const topBox = {
         display: 'flex',
         width: '1290px',
+        height: '255px',
         border: '2px solid gray',
         padding: '50px',
-        margin: '25px 50px 75px 2px',
+        margin: '30px 50px 75px 2px',
         flexDirection: 'row',
         justifyContent: 'space-between',
     }
@@ -25,6 +26,7 @@ export default function Forecast({city}) {
         height: '600px',
         overflow: 'auto',
         display:'inline-block',
+        marginTop: '15px'
       }
 
 
