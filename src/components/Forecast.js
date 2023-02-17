@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
-
+import moment from "moment";
 
 export default function Forecast({city}) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState({});
 
-    // let dates = [];
-
-   
+    const mainBox = {
+        display: 'flex', 
+        justifyContent: 'center', 
+        flexDirection: 'column',
+    }
     const topBox = {
         display: 'flex',
         width: '1290px',
@@ -42,9 +44,10 @@ export default function Forecast({city}) {
             return <div>Loading...</div>;
         } else {
             return (
-                <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}} className='container'>
+                <div style={mainBox} className='container'>
                   <div style={topBox} className='bg-info'>
                     <div>
+                    {moment().calendar()}
                         <h1>{city} </h1><br />
                         <h3>{items.current.condition.text}</h3>
                     </div>
@@ -53,21 +56,22 @@ export default function Forecast({city}) {
                         <h2>{items.current.temp_f} F</h2>
                     </div>
                   </div>    
-                   
-                    <div>
+                  <div>
                         <table  className="table table-bordered">
                            <thead className="thead-dark">
                                 <tr>
                                     <th scope="col">Days</th>
                                     <th scope="col">Max Tem</th>
                                     <th scope="col">Min Tem</th>
+                                    <th scope="col">Condition</th>
+                                    <th scope="col">Precip</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {items.forecast.forecastday.map((i) => 
                                     <tr>
                                         <td>
-                                            {i.date}
+                                            {moment(i.date).format('ll')}
                                         </td>
                                         <td>
                                             {i.day.maxtemp_f}
@@ -75,11 +79,18 @@ export default function Forecast({city}) {
                                         <td>
                                             {i.day.mintemp_f} 
                                         </td>
+                                        <td>
+                                            <img src={i.day.condition.icon} alt="conditionIcon" />
+                                            {i.day.condition.text} 
+                                        </td>
+                                        <td>
+                                            {i.day.totalprecip_mm} 
+                                        </td>
+                                        
                                     </tr>
                                 )}
-                               </tbody>
-                            </table>
-                        {/* <p>{items.forecast.forecastday.map((val) => val.day.maxtemp_f)}</p>  */}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             );
