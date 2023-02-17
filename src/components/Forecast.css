@@ -2,7 +2,8 @@
     position: relative;
     height: 615px;
     overflow: auto;
-    }
+    scrollbar-width: thin;
+}
 .table-wrapper-scroll-y {
     display: block;
 }
@@ -10,3 +11,4 @@
     position: sticky;
     top: 0 ;
 }
+

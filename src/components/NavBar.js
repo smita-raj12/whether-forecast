@@ -4,7 +4,7 @@ import Forecast from './Forecast';
 
 function NavBar() {
      
-    const [city1, setCity1] = useState("");
+    const [city1, setCity1] = useState("Reno NV");
     
     return (
         <div>
