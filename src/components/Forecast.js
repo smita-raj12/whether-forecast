@@ -57,6 +57,7 @@ export default function Forecast({city}) {
                     <div>
                         <h1>{city} </h1><br />
                         <h3>{items.current.condition.text}</h3>
+                        <p>{moment(items.location.localtime).calendar()}</p>
                     </div>
                     <div>
                         <img src={items.current.condition.icon} alt="conditionIcon" style={{height:'60px', width:'45px'}} />

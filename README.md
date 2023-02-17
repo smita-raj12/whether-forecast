@@ -43,6 +43,7 @@ Create api key from [here](https://www.weatherapi.com/). On Forecast.js file rep
 ### Feature enhancements:- 
 
 - Add dropdown box to select city.
+- Make the fixed header for table.
 - Inside navbar add options like selecting weather forecast for next 10 days and hourly.
 - Add search box inside a navbar to search cities. 
 - Add more parameters to table 
