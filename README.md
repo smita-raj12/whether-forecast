@@ -5,7 +5,7 @@
 
 ## Project Description
 
- This is a complete web application for tracking 14 days weather forecast for 3 different US cities.
+This is a complete web application for tracking 14 days weather forecast for 3 different US cities.
 
 ## Technologies Used
 1. Bootstrap 
@@ -37,16 +37,16 @@ Run `npm install` in the git BASH terminal to install dependencies.
 
 ### For API
 
-1. create api key from [here](https://www.weatherapi.com/). On Forecst.js file replace `process.env.REACT_APP_API_KEY ` to your key. 
+Create api key from [here](https://www.weatherapi.com/). On Forecast.js file replace `process.env.REACT_APP_API_KEY ` to your key. 
 
 
 ### Feature enhancements:- 
 
-- [] Add dropdown box to select city.
-- [] Inside navbar add options like selecting weather forecast for next 10 days and hourly.
-- [] Add search box inside a navbar to search cities. 
-- [] Add more parameters to table 
-- [] Add some stylings to home page. 
+- Add dropdown box to select city.
+- Inside navbar add options like selecting weather forecast for next 10 days and hourly.
+- Add search box inside a navbar to search cities. 
+- Add more parameters to table 
+- Add some stylings to home page. 
 
 
 ## Known bugs
