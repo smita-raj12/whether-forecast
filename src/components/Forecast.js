@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+import './Forecast.css';
 import moment from "moment";
 
 export default function Forecast({city}) {
@@ -6,11 +8,6 @@ export default function Forecast({city}) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState({});
 
-    const mainBox = {
-        display: 'flex', 
-        justifyContent: 'center', 
-        flexDirection: 'column',
-    }
     const topBox = {
         display: 'flex',
         width: '1290px',
@@ -21,14 +18,6 @@ export default function Forecast({city}) {
         flexDirection: 'row',
         justifyContent: 'space-between',
     }
-
-    const tableWrapper = {
-        height: '600px',
-        overflow: 'auto',
-        display:'inline-block',
-        marginTop: '15px'
-      }
-
 
     useEffect(() => {
 
@@ -52,27 +41,27 @@ export default function Forecast({city}) {
             return <div>Loading...</div>;
         } else {
             return (
-                <div style={mainBox} className='container'>
-                  <div style={topBox} className='bg-info'>
+                <div className='container'>
+                  <div style={topBox} className='container bg-info'>
                     <div>
                         <h1>{city} </h1><br />
                         <h3>{items.current.condition.text}</h3>
                         <p>{moment(items.location.localtime).calendar()}</p>
                     </div>
                     <div>
-                        <img src={items.current.condition.icon} alt="conditionIcon" style={{height:'60px', width:'45px'}} />
+                        <img src={items.current.condition.icon} alt="conditionIcon" className="img-fluid"  />
                         <h2>{items.current.temp_f} F</h2>
                     </div>
                   </div>    
-                  <div style={tableWrapper}>
-                        <table  className="table table-bordered" style={{border: '1px solid black'}}>
+                  <div className="table-responsive table-wrapper-scroll-y my-custom-scrollbar inline-block mt-15">
+                        <table  className="table table-striped table-light">
                            <thead>
                                 <tr>
-                                    <th scope="col">Days</th>
-                                    <th scope="col">Max Tem</th>
-                                    <th scope="col">Min Tem</th>
-                                    <th scope="col">Condition</th>
-                                    <th scope="col">Precip</th>
+                                    <th scope="col" className='h4 header'>Days</th>
+                                    <th scope="col" className='h4 header'>Max Temp</th>
+                                    <th scope="col" className='h4 header'>Min Temp</th>
+                                    <th scope="col" className='h4 header'>Condition</th>
+                                    <th scope="col" className='h4 header'>Precip</th>
                                 </tr>
                             </thead>
                             <tbody>
