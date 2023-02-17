@@ -1,11 +1,25 @@
 import { useState, useEffect } from 'react';
 
+
 export default function Forecast({city}) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState({});
+
+    // let dates = [];
+
    
-    console.log(city)
+    const topBox = {
+        display: 'flex',
+        width: '1290px',
+        border: '2px solid gray',
+        padding: '50px',
+        margin: '25px 50px 75px 2px',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    }
+
+   
     useEffect(() => {
 
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=14`)
@@ -28,15 +42,44 @@ export default function Forecast({city}) {
             return <div>Loading...</div>;
         } else {
             return (
-                <div style={{marginLeft:'100px'}}>
-                  <div>
-                    <p style={{fontSize: '30px'}}>{city} </p><br />
-                    <p>Max Temp:-- {items.current.temp_f} F</p>
-                  </div>    
-                    <img src={items.current.condition.icon} alt="conditionIcon" />
+                <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}} className='container'>
+                  <div style={topBox} className='bg-info'>
                     <div>
-                        <p>{items.forecast.forecastday.map((i) => i.date)}</p>
-                        <p>{items.forecast.forecastday.map((val) => val.day.maxtemp_f)}</p> 
+                        <h1>{city} </h1><br />
+                        <h3>{items.current.condition.text}</h3>
+                    </div>
+                    <div>
+                        <img src={items.current.condition.icon} alt="conditionIcon" style={{height:'60px', width:'45px'}} />
+                        <h2>{items.current.temp_f} F</h2>
+                    </div>
+                  </div>    
+                   
+                    <div>
+                        <table  className="table table-bordered">
+                           <thead className="thead-dark">
+                                <tr>
+                                    <th scope="col">Days</th>
+                                    <th scope="col">Max Tem</th>
+                                    <th scope="col">Min Tem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {items.forecast.forecastday.map((i) => 
+                                    <tr>
+                                        <td>
+                                            {i.date}
+                                        </td>
+                                        <td>
+                                            {i.day.maxtemp_f}
+                                        </td>
+                                        <td>
+                                            {i.day.mintemp_f} 
+                                        </td>
+                                    </tr>
+                                )}
+                               </tbody>
+                            </table>
+                        {/* <p>{items.forecast.forecastday.map((val) => val.day.maxtemp_f)}</p>  */}
                     </div>
                 </div>
             );
